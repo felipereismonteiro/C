@@ -15,9 +15,7 @@ int main() {
   printf("Digite outro número: ");
 
   scanf("%d", &chute);
-
  }
-
  printf("Você acertou!!! o número era %d\n", numeroJogo);
 
  return 0;
