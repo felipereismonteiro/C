@@ -1,18 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 
-/** Se coloca o * antes do tentativas para ser como ponteiro, agora no array de chutes nao se aplica pq 
- * Isso ocorre porque o nome de um array em C, quando usado como argumento de uma função, já é um ponteiro para o primeiro elemento do array.
+/**
+ * Se colocar o * antes do tentativas para ser como ponteiro, agora no array de chutes não se aplica, porque
+ * o nome de um array em C, quando usado como argumento de uma função, já é um ponteiro para o primeiro elemento do array.
+ *
+ * Então, ao declarar com &, estou apontando para a variável que eu quero (chuteFunction(chutes, &tentativas, &chute)); 
+ * e ao pegar na função com *, estou usando o valor dessa variável.
  */
-
-/**Entao ao declarar com & eu estou apontando para a variavel q eu quero  chuteFunction(chutes, &tentativas, &chute); e ao pegar na funcao com o * eu estou usando o valor dessa variavel*/
-void chuteFunction(char chutes[26], int *tentativas, char *chute) {
+void chuteFunction(char chutes[26], int *tentativas) {
+  char chute;
   printf("\nDigite seu chute: ");
-  scanf(" %c", chute);
+  scanf(" %c", &chute);
 
-  printf("\n%c", chute);
-
-  chutes[*tentativas] = *chute;
+  chutes[*tentativas] = chute;
   (*tentativas)++;
 }
 
@@ -28,8 +29,7 @@ int main() {
   int acertos = 0;
 
   do {
-    char chute;
-    chuteFunction(chutes, &tentativas, &chute);
+    chuteFunction(chutes, &tentativas);
 
     acertos = 0;
 
