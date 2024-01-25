@@ -37,7 +37,9 @@ int main() {
  /** Sempre que alocar de forma dinamica assim precisamos liberar esse espaço depois de usado*/ 
  free(numeroDinamico);
 
- /** alocando de forma dinamica um array assim int[][]*/
+ /** alocando de forma dinamica um array assim int[] com 5 posições + 1 usando de exemplo se por acaso
+  * fosse um char
+ */
  int** matriz = malloc(sizeof(int) * (5 + 1));
  // + 1 se caso for um char pq ele precisa imprimir o \0 no final que diz o final da string
 
