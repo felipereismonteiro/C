@@ -6,6 +6,9 @@ struct variaveis {
  char cidadeLetra
 };
 
+// apelido
+typedef struct variaveis VARIAVEIS;
+
 int main() {
  struct variaveis pessoa;
 
