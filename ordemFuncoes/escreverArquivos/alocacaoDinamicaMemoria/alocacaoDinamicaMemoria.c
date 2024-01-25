@@ -24,15 +24,16 @@ int main() {
  */
  // int* numeroDinamico = malloc(1);
 
- int* numeroDinamico = mallloc(sizeof(int))
+ int* numeroDinamico = malloc(sizeof(int));
  // declarando primeiro ele vai como 0 q eh false
 
- printf("%d\n", *numeroDinamico);
  /** assim ele vai declarar ao valor o 5 e se passar sem o * ele nao consegue declarar*/
  *numeroDinamico = 5;
  
 
- printf("%d", *numeroDinamico);
+ printf("%d", sizeof("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+ // cada caractere é 1 byte
+
  /** Sempre que alocar de forma dinamica assim precisamos liberar esse espaço depois de usado*/ 
  free(numeroDinamico);
 
