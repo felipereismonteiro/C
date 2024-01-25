@@ -18,8 +18,13 @@ int main() {
   * se for um int vai precisar de 4 se for um char vai precsar de 1
   * e assim por diante,
   * se passar o numeros de bytes a variavel ele simplesmente nao aloca
+  * 
+  * ou tambem dependendo de onde for rodar vc pode colocar sizeof(int) por exemplo
+  * nisso ele vai calcular automaticamente o tamanho pra vc
  */
- int* numeroDinamico = malloc(1);
+ // int* numeroDinamico = malloc(1);
+
+ int* numeroDinamico = mallloc(sizeof(int))
  // declarando primeiro ele vai como 0 q eh false
 
  printf("%d\n", *numeroDinamico);
