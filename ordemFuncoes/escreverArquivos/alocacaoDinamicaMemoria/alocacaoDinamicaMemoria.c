@@ -14,7 +14,12 @@ int main() {
 
  /** aloca o espaço em tempo de execução*/
 
- int* numeroDinamico = malloc(4);
+ /** precisamos passar certinho o numero de bytes que a variavel vai precisar
+  * se for um int vai precisar de 4 se for um char vai precsar de 1
+  * e assim por diante,
+  * se passar o numeros de bytes a variavel ele simplesmente nao aloca
+ */
+ int* numeroDinamico = malloc(1);
  // declarando primeiro ele vai como 0 q eh false
 
  printf("%d\n", *numeroDinamico);
