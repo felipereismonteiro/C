@@ -37,5 +37,18 @@ int main() {
  /** Sempre que alocar de forma dinamica assim precisamos liberar esse espaço depois de usado*/ 
  free(numeroDinamico);
 
+ /** alocando de forma dinamica um array assim int[][]*/
+ int** matriz = malloc(sizeof(int) * (5 + 1));
+ // + 1 se caso for um char pq ele precisa imprimir o \0 no final que diz o final da string
+
+ /** Liberando de cada matriz pq se imprimiros o primeiro apenas e mostra toda a linha matriz
+  * entao se dermos o free ele libera toda aquela linha da matriz
+ */
+ for (int i = 0; i < 5; i++) {
+  free(matriz[i]);
+ }
+
+ free(matriz);
+ 
  return 0;
 }
